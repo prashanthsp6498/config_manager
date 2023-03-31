@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-for i in git tmux xclip vim gcc;
+for i in tmux xclip gcc;
 do
 
     which $i 2>&1 >/dev/null
