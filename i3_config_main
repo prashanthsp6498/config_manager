@@ -211,7 +211,9 @@ bindsym Ctrl+Print exec --no-startup-id maim | xclip -selection clipboard -t ima
 bindsym Ctrl+$mod+Print exec --no-startup-id maim --window $(xdotool getactivewindow) | xclip -selection clipboard -t image/png
 bindsym Ctrl+Shift+Print exec --no-startup-id maim --select | xclip -selection clipboard -t image/png
 
-## audio volume
+## audio control
 bindsym Ctrl+$mod+period exec amixer set Master -q 5%+
 bindsym Ctrl+$mod+comma exec amixer set Master -q 5%-
-
+bindsym Shift+$mod+comma exec playerctl play-pause
+bindsym $mod+period exec playerctl next
+bindsym $mod+Shift+period exec playerctl previous
